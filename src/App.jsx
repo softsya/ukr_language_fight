@@ -4,6 +4,7 @@ import './App.css';
 import uaDict from './lang/uk-UA';
 import enDict from './lang/en-US';
 import Header from './components/Header';
+import Timeline from './components/Timeline';
 
 const messages = {
   "uk-UA": uaDict,
@@ -19,11 +20,13 @@ function App() {
       <div className="App">
       <Header chooseLanguage={setLang}/>
 
-      <FormattedMessage
+      <Timeline/>
+
+      {/* <FormattedMessage
         id="1967"
         values={{ts: Date.now()}}
-      />
-
+      /> */}
+      
       </div>
     </IntlProvider>
   );

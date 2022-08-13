@@ -1,5 +1,7 @@
 body {
   background-color: whitesmoke;
+  box-sizing: content-box;
+  width: 100%;
 }
 
 /* .langDropdown {
@@ -13,34 +15,12 @@ body {
 }
 
 .header h1 {
-  margin: 0;
+  margin: 5px;
   color: darkred;
   text-align: center;
 }
 
-/* TIMELINE */
-time {
-  margin-left: 30px;
-}
-
-.timeline ul li {
-  list-style-type: none;
-  position: relative;
-  width: 8px;
-  margin: 0 auto;
-  padding-top: 130px;
-  background: crimson;
-}
- 
-.timeline ul li::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background: inherit;
-  z-index: 1;
+.yearsWrap {
+  height: 70vh;
+  overflow-y: scroll;
 }

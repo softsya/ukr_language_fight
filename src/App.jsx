@@ -5,6 +5,7 @@ import uaDict from './lang/uk-UA';
 import enDict from './lang/en-US';
 import Header from './components/Header';
 import Timeline from './components/Timeline';
+import './reset.css';
 
 const messages = {
   "uk-UA": uaDict,

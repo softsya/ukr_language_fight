@@ -1,3 +1,7 @@
 export default {
-  header: "cancel chronology ukr",
+  header: "suppression of Ukrainian",
+}
+
+export const timelineItemsUS = {
+
 }

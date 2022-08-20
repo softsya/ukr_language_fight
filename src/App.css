@@ -4,23 +4,55 @@ body {
   width: 100%;
 }
 
-/* .langDropdown {
-  
-} */
+.langDropdown {
+  color: black;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
 
 /* HEADER */
 .header {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 20px 20px 20px 20px;
 }
 
-.header h1 {
-  margin: 5px;
-  color: darkred;
+.header p {
+  color: black;
   text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+/* TIMELINE */
+.timeline {
+  display: flex;
+  justify-content: center;
 }
 
 .yearsWrap {
+  width: fit-content;
+  margin-left: 20px;
+  margin-right: 20px;
   height: 70vh;
   overflow-y: scroll;
+}
+
+.yearWrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+time p {
+  display: flex;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  font-size: 65px;
 }

@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import {timelineItems} from "../timelineItems";
-// import {FormattedMessage} from "react-intl";
+import EventInfo from './EventInfo';
 
-const years = Object.keys(timelineItems); // Object.keys returns an array [] of keys 
+const Timeline = ({timelineItems}) => {
+  const years = Object.keys(timelineItems); // Object.keys returns an array [] of keys 
 
-const Timeline = () => {
-  const [selectedYear, selectYear] = useState(years[0]);
+  const [selectedYear, selectYear] = useState();
   
   const yearsWrap = years.map(year => {
     return (
-        <div key={year}>
+        <div className="yearWrap"
+          key={year}
+          onClick={ () => selectYear(year)}>
         { /* displays separate div for each mapped year */ }
-          <time>{year}</time>
+          <time><p>{year}</p></time>
         </div>
     )
   });
@@ -21,6 +22,7 @@ const Timeline = () => {
       <div className="yearsWrap">
         {yearsWrap}
       </div>
+      <EventInfo yearValue={timelineItems[selectedYear]}/> {/* їрІвент - то пропса нахуй */}
     </section>
   );
 };

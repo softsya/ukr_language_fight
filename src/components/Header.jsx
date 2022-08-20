@@ -6,7 +6,6 @@ const languageOptions = [
   { key: 'Ukrainian', text: 'ua', value: 'uk-UA' },
   { key: 'English', text: 'en', value: 'en-US' },
   { key: 'German', text: 'de', value: 'de-DE' },
-  { key: 'Polish', text: 'pl', value: 'pl-PL' },
 ]
 
 const Header = ({chooseLanguage}) => {
@@ -16,10 +15,12 @@ const Header = ({chooseLanguage}) => {
 
   return (
   <header className="header">
-    <h1><FormattedMessage id="header"/></h1>
-    <Dropdown className="langDropdown" onChange={handleLangChange}
-    options={languageOptions}
-    icon="world"
+    <p><FormattedMessage id="header"/></p>
+    <Dropdown 
+      className="langDropdown" 
+      onChange={handleLangChange}
+      options={languageOptions}
+      defaultValue={'en-US'}
     />
   </header>
   )

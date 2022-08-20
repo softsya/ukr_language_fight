@@ -1,17 +1,20 @@
 import React, {useState} from 'react';
-import {IntlProvider, FormattedMessage} from 'react-intl';
+import {IntlProvider} from 'react-intl';
 import './App.css';
-import uaDict from './lang/uk-UA';
-import enDict from './lang/en-US';
+import uaDict, {timelineItemsUA} from './lang/uk-UA';
+import enDict, {timelineItemsUS} from './lang/en-US';
 import Header from './components/Header';
 import Timeline from './components/Timeline';
-import './reset.css';
 
 const messages = {
   "uk-UA": uaDict,
   "en-US": enDict,
-  "de-DE": enDict, // todo - add german dict and change here
-  "pl-PL": uaDict, // todo - add polish dict and change here
+  // "de-DE": enDict, // todo - add german dict and change here
+}
+
+const timelineItems = {
+  "uk-UA": timelineItemsUA,
+  "en-US": timelineItemsUS,
 }
 
 function App() {
@@ -20,14 +23,8 @@ function App() {
     <IntlProvider messages={messages[selectedLang]} locale={selectedLang} defaultLocale={"en-US"}>
       <div className="App">
       <Header chooseLanguage={setLang}/>
+      <Timeline timelineItems={timelineItems[selectedLang]} />
 
-      <Timeline/>
-
-      {/* <FormattedMessage
-        id="1967"
-        values={{ts: Date.now()}}
-      /> */}
-      
       </div>
     </IntlProvider>
   );

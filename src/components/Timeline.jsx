@@ -7,12 +7,20 @@ const Timeline = ({timelineItems}) => {
   const [selectedYear, selectYear] = useState();
   
   const yearsWrap = years.map(year => {
+    let yearClassName = "";
+
+    if (year === selectedYear) {
+      yearClassName = "selected";
+    }
+    
     return (
-        <div className="yearWrap"
+        <div
+          className="yearWrap"
           key={year}
-          onClick={ () => selectYear(year)}>
-        { /* displays separate div for each mapped year */ }
-          <time><p>{year}</p></time>
+          onClick={ () => selectYear(year)}
+        >
+          { /* displays separate div for each mapped year */ }
+          <time><p className={yearClassName}>{year}</p></time>
         </div>
     )
   });
@@ -22,7 +30,7 @@ const Timeline = ({timelineItems}) => {
       <div className="yearsWrap">
         {yearsWrap}
       </div>
-      <EventInfo yearValue={timelineItems[selectedYear]}/> {/* їрІвент - то пропса нахуй */}
+      {selectedYear && <EventInfo yearIndex={years.indexOf(selectedYear)} yearValue={timelineItems[selectedYear]}/>} {/* їрІвент - то пропса нахуй */}
     </section>
   );
 };

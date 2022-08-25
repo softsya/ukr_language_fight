@@ -1,15 +1,24 @@
 import React from "react";
 import "../css/EventInfo.css";
 
-const EventInfo = ({yearValue}) => { // value - подія, яка відбувається в той рік
+const EventInfo = ({yearValue, yearIndex}) => { // value - подія, яка відбувається в той рік
+
+  let containerClassName = "";
+  if (yearIndex % 2) {
+    containerClassName = "right";
+  } else {
+    containerClassName = "left";
+  }
+
   let contents;
   if (typeof yearValue === "string") {
     contents = <p>{yearValue}</p>;
   }
+  // для тих років, де сталося багато подій
   if (Array.isArray(yearValue)) {
     contents = yearValue.map(item => {
       return (
-        <div className="eventWrapper">
+        <div className="multipleEventsContainer"> 
           <span>
           {item.text}
           </span>
@@ -21,7 +30,7 @@ const EventInfo = ({yearValue}) => { // value - подія, яка відбув�
   }
 
   return (
-    <div className="eventsInfoContainer">
+    <div className={`${containerClassName} eventsInfoContainer`}>
     <section className="eventsInfo">
       {contents}
     </section>

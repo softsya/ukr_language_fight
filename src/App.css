@@ -43,6 +43,10 @@ body {
   overflow-y: scroll;
 }
 
+.yearsWrap::-webkit-scrollbar { 
+  display: none;
+}
+
 .yearWrap {
   display: flex;
   justify-content: center;
@@ -55,4 +59,9 @@ time p {
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
   font-size: 65px;
+  cursor: pointer;
+}
+
+.selected {
+  color: firebrick;
 }

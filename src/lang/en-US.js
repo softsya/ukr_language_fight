@@ -5,7 +5,7 @@ export default {
 export const timelineItemsUS = {
   "1627": "The order of Tsar Mikhail at the request of Moscow Patriarch Filaret to burn all copies of the <q>Teacher's Gospel</q> printed in Ukraine by Kyrylo Stavrovetskyi.",
   "1677": "The order of the Moscow Patriarch Joakim to tear out from the Ukrainian books all the pages which are <q>not similar to the Moscow books.</q>",
-  "1688": "on the orders of Moscow Patriarch Joakim, <q>Crocheted Christ</q> of Antin Radyvylovskyi war burned in massive fires on the streets of Moscow together with the works of prominent Ukrainian theologians Petro Mohyla, Lazar Baranovych, and Innocent Giesel.",
+  "1688": "On the orders of Moscow Patriarch Joakim, \"Crocheted Christ\" of Antin Radyvylovskyi war burned in massive fires on the streets of Moscow together with the works of prominent Ukrainian theologians Petro Mohyla, Lazar Baranovych, and Innocent Giesel.",
   "1689": "Kyiv Pechersk Lavra is forbidden to print books without patriarchal permission from Russia.",
   "1690": "Condemnation and anathema of the Council of the Russian Orthodox Church for <q>new Kievan books</q> by Petro Mohyla, Kyrylo Stavrovetskyi, Lazar Baranovych, Antin Radyvylovskyi, and others.",
   "1696": "The Sejm of the Polish-Lithuanian Commonwealth decided to introduce the Polish language in the courts and institutions of Right-bank Ukraine.",
